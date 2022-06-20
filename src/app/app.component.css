@@ -1,0 +1,82 @@
+.vcfm-performance-dashboard-header {
+  padding: 24px 24px 0px 24px;
+  min-height: 143px !important;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 0;
+}
+
+.content {
+  padding: 4px;
+}
+
+.header-l {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-title {
+  flex-direction: column;
+}
+
+.all-widgets-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.datepicker {
+  display: flex;
+  color: white !important;
+  background: rgba(0, 0, 0, 0.12);
+  height: 46px;
+  border-radius: 8px;
+  width: 200px !important;
+  padding-left: 10px;
+  /* margin-bottom: .5%; */
+}
+
+.label {
+  color: white !important;
+  display: flex;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.datepickerToggle {
+  color: white;
+}
+
+mat-button-toggle-group {
+  border-radius: 9px !important;
+  background-color: #0388c9;
+  border: 1px solid white;
+}
+
+mat-button-toggle {
+  color: rgb(255, 255, 255);
+}
+
+::ng-deep .mat-button-toggle-checked {
+  color: rgb(0, 0, 0) !important;
+}
+
+h2 {
+  color: white;
+  font-size: 26px;
+}
+
+h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0px;
+}

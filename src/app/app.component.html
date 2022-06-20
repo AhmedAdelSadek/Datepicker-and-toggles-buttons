@@ -1,0 +1,61 @@
+<div class="page-layout simple fullwidth" style="background-color: #0388c9;">
+  <!-- HEADER -->
+  <div class="accent vcfm-performance-dashboard-header" fxLayout="row" style="padding-top: 32px"
+    fxLayoutAlign="start center">
+    <!-- container -->
+    <div class="header-l" fxLayout="column" fxFlex="80%">
+      <!-- First Header -->
+      <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between start">
+        <div fxLayout="column" fxLayoutAlign="start">
+          <h1>VCFM Performance Dashboard</h1>
+        </div>
+        <!--toggle-group-->
+        <div fxLayout="column" fxLayoutAlign="end">
+          <mat-button-toggle-group [value]="selectedState" (change)="onChange($event)">
+            <mat-button-toggle [value]="toggleEnum.Live" [disabled]="disabledLive" id="toggleLive"
+              matTooltip="Keine Liveperformance vorhanden" [matTooltipDisabled]="TooltipLiveDisabled.value">
+              <span>Live</span>
+            </mat-button-toggle>
+            <mat-button-toggle [value]="toggleEnum.Tag" [disabled]="disabledTag" id="toggleTag"
+              matTooltip="Keine Tagesperformance vorhanden" [matTooltipDisabled]="TooltipTagDisabled.value">
+              <span>Tag</span>
+            </mat-button-toggle>
+            <mat-button-toggle [value]="toggleEnum.Woche" [disabled]="disabledWoche" id="toggleWoche"
+              matTooltip="Keine Wochenperformance vorhanden" [matTooltipDisabled]="TooltipWocheDisabled.value">
+              <span>Woche</span>
+            </mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+        <!-- / toggle-group -->
+      </div>
+      <!-- / First Header -->
+      <!-- second Header -->
+      <div fxLayout="row">
+        <div fxLayout="column" fxLayoutAlign="start">
+          <h2>{{showToggleSelected}}</h2>
+        </div>
+      </div>
+      <!-- / second Header -->
+      <!-- third Header -->
+      <div fxLayout="row" fxLayoutWrap fxLayoutAlign="space-between end">
+        <div fxLayout="column" fxLayoutAlign="start">
+        </div>
+        <!--datepicker-->
+        <div fxLayout="column" fxLayoutAlign="end" class="datepicker">
+          <mat-form-field fxFlexFill floatLabel="never" appearance="none">
+            <mat-label class="label">Date</mat-label>
+            <input class="input" [max]="maxDate" matInput [matDatepicker]="picker" [formControl]="date"
+              (dateChange)="setToggles($event)" [matDatepickerFilter]="weekendsDatesFilter">
+            <mat-datepicker-toggle class="datepickerToggle" matSuffix [for]="picker">
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker [startAt]="date"></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <!-- / datepicker-->
+      </div>
+      <!-- / third Header -->
+    </div>
+    <!-- / container -->
+  </div>
+  <!-- / HEADER -->
+</div>

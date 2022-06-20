@@ -1,0 +1,24 @@
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-material.css";
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+
+
+.sick-days-warning {
+  background-color: sandybrown !important;
+  font-weight: bold !important;
+}
+
+.sick-days-breach {
+  background-color: lightcoral !important;
+  font-weight: '900' !important;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+
